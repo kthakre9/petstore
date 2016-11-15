@@ -1,11 +1,11 @@
 var path = require('path');
-var pluginExtractText = require("extract-text-webpack-plugin");
 
 module.exports = {
     context: path.join(__dirname, '/app'),
     entry: "./app.js",
     output: {
-        path: path.join(__dirname, '/app/build'),
+        path: __dirname,
+        publicPath: "/build/",
         filename: "bundle.js"
     },
     devServer: {
@@ -24,7 +24,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: pluginExtractText.extract("style-loader", "css-loader")
+                loader: "style-loader!css-loader"
             },
             {
                 test: /\.(jpg|png|svg|ttf|eot|woff|woff2)$/,
@@ -36,8 +36,5 @@ module.exports = {
             }
 
         ]
-    },
-    plugins: [
-        new  pluginExtractText('[name].css')
-    ]
+    }
 };
