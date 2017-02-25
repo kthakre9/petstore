@@ -1,19 +1,21 @@
-var path = require('path');
+var path = require("path");
 
 module.exports = {
-    context: path.join(__dirname, '/app'),
+    context: path.join(__dirname, "/app"),
     entry: "./app.js",
+    devtool: "source-map",
     output: {
         path: __dirname,
         publicPath: "/build/",
         filename: "bundle.js"
     },
     devServer: {
-        contentBase: 'app'
+        contentBase: "app",
+        port: process.env.PORT || 8001
     },
     resolve: {
-        modulesDirectories: ['web_modules','node_modules'],
-        extensions: ['', '.js', '.json', '.es6']
+        modulesDirectories: ["web_modules","node_modules"],
+        extensions: ["", ".js", ".json", ".es6"]
     },
     module: {
         loaders: [
@@ -28,11 +30,15 @@ module.exports = {
             },
             {
                 test: /\.(jpg|png|svg|ttf|eot|woff|woff2)$/,
-                loader: 'file-loader?limit=10000'
+                loader: "file-loader?limit=10000"
             },
             {
                 test: /\.json$/,
-                loader: 'json-loader'
+                loader: "json-loader"
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=public/fonts/[name].[ext]'
             }
 
         ]
