@@ -7,17 +7,57 @@ export default React.createClass({
                 <div className="section1">
                     <h2>Adopting the Perfect Pet for your family</h2>
                     <div className="wrapper">
-                        <div className="container">
-                            <img src="./images/dog.jpg" />
-                            <h2>The Dog shop</h2>
+                        <div className="row">
+                            <div className="column">
+                                <img src="./images/dog.jpg" />
+                                <h2><a href="#dogs">Dog shop <span>
+                                    <svg fill="#fd6b54" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                                        <path d="M0-.25h24v24H0z" fill="none"/>
+                                    </svg>
+                                </span></a></h2>
+                            </div>
+                            <div className="column">
+                                <img src="./images/cat.jpg" />
+                                <h2><a href="#dogs">Cat shop <span>
+                                    <svg fill="#fd6b54" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                                        <path d="M0-.25h24v24H0z" fill="none"/>
+                                    </svg>
+                                </span></a>
+                                </h2>
+                            </div>
                         </div>
-                        <div className="container">
-                            <img src="./images/dog.jpg" />
-                            <h2>The Cat shop</h2>
-                        </div>
-                        <div className="container">
-                            <img src="./images/dog.jpg" />
-                            <h2>Rabbits</h2>
+                        <div className="row">
+                            <div className="column_small">
+                                <img src="./images/cat.jpg" />
+                                <h2><a href="#">Bird shop
+                                <span>
+                                    <svg fill="#fd6b54" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                                        <path d="M0-.25h24v24H0z" fill="none"/>
+                                    </svg>
+                                </span></a>
+                                </h2>
+                            </div>
+                            <div className="column_small">
+                                <img src="./images/cat.jpg" />
+                                <h2><a href="#">Reptile shop <span>
+                                    <svg fill="#fd6b54" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                                        <path d="M0-.25h24v24H0z" fill="none"/>
+                                    </svg>
+                                </span></a></h2>
+                            </div>
+                            <div className="column_small">
+                                <img src="./images/cat.jpg" />
+                                <h2><a href="#">Fish shop <span>
+                                    <svg fill="#fd6b54" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                                        <path d="M0-.25h24v24H0z" fill="none"/>
+                                    </svg>
+                                </span></a></h2>
+                            </div>
                         </div>
                     </div>
                 </div>

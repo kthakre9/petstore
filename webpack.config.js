@@ -1,3 +1,4 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var path = require("path");
 
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
     output: {
         path: __dirname,
         publicPath: "/build/",
-        filename: "bundle.js"
+        filename: "app.js"
     },
     devServer: {
         contentBase: "app",
@@ -25,22 +26,20 @@ module.exports = {
                 loader: "babel-loader"
             },
             {
-                test: /\.css$/,
-                loader: "style-loader!css-loader"
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
             },
             {
                 test: /\.(jpg|png|svg|ttf|eot|woff|woff2)$/,
-                loader: "file-loader?limit=10000"
+                loader: "file?name=public/fonts/[name].[ext]"
             },
             {
                 test: /\.json$/,
                 loader: "json-loader"
-            },
-            {
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file?name=public/fonts/[name].[ext]'
             }
-
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin("style.css")
+    ]
 };
