@@ -67,6 +67,10 @@ html, body{
 
 .content {
     .lists {
+        h1{
+            text-align: center;
+        }
+
         .row {
             background-color: #f7f8f8;
             overflow: auto;
@@ -87,6 +91,8 @@ html, body{
             box-sizing: border-box;
             border: 1px solid #fd6b54;
             margin-right: 10px;
+            padding-top: 10px;
+            text-align: center;
         }
     }
 
