@@ -12,7 +12,13 @@ module.exports = {
     },
     devServer: {
         contentBase: "app",
-        port: process.env.PORT || 8001
+        port: process.env.PORT || 8001,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3006',
+                secure: false
+            }
+        }
     },
     resolve: {
         modulesDirectories: ["web_modules","node_modules"],

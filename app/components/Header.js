@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from 'react';
 
-export default React.createClass({
+export default class Header extends Component{
     render() {
         return (
                 <ul>
@@ -12,4 +12,4 @@ export default React.createClass({
                 </ul>
         );
     }
-});
+};
