@@ -68,9 +68,6 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin("style.css"),
         new webpack.HotModuleReplacementPlugin(),
-        // enable HMR globally
-
-        new webpack.NamedModulesPlugin(),
-        // prints more readable module names in the browser console on HMR updates
+        new webpack.NamedModulesPlugin()
     ],
 };

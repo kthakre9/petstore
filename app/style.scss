@@ -10,29 +10,37 @@ html, body{
     padding: 8px;
 }
 
-.Header{
-    height: 54px;
-    background-color: #ffffff;
-    overflow: visible;
-    /*border-bottom: 1px solid #BFD8D2;*/
-    ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
+#petstore_root{
+    nav{
+        height: 54px;
+        background-color: #ffffff;
+        overflow: visible;
+        margin-bottom: 0;
+        border-bottom: 1px solid beige;
     }
 
-    li{
-        float: left;
-        display: block;
-        padding: 8px;
-    }
-
-    ul>li{
+    .navbar-header a{
         font-size: 36px;
         margin-left: 30px;
         font-family: 'Lobster Two', cursive;
     }
+
+    .input-group .form-control, .input-group-addon, .input-group-btn{
+        height: 40px;
+        border-radius: 0;
+        border: none;
+        background-color: #fff;
+    }
+
+    .input-group-addon{
+        cursor: pointer;
+
+        &:hover{
+            color: #fd6b54;
+        }
+    }
 }
+
 
 .Footer{
     background-color: #BFD8D2;
@@ -65,8 +73,12 @@ html, body{
 
 .content {
     .lists {
+        background-color: #FEDCD2;
         h1{
             text-align: center;
+            margin: 0;
+            padding: 2%;
+            color: #fd6b54;
         }
 
         .row {
@@ -91,19 +103,48 @@ html, body{
             margin-right: 10px;
             padding-top: 10px;
             text-align: center;
+            background-color: #f7f6f9;
         }
 
         .col-md-4 {
             max-height: 500px;
+            a{
+                color: #fd6b54;
+            }
 
             p {
                 width: 20em;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
-                -webkit-line-clamp: 3;
+                -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
             }
+        }
+
+        .table>tbody>tr>td{
+            border-top: none;
+            padding: 0.7%;
+            width: 10%;
+            vertical-align: middle;
+        }
+
+        .table {
+            margin-bottom: 0;
+        }
+
+        td:last-child {
+            p{
+                margin: 0;
+                vertical-align: middle;
+                width: 30em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+
         }
     }
 
@@ -182,7 +223,7 @@ html, body{
     .section2 {
         background-color: #ffffff;
         div {
-            padding: 5%;
+            padding: 3%;
             text-align: center;
         }
 

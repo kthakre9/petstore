@@ -71,12 +71,16 @@ class Content extends Component{
                         </div>
                     </div>
                 </div>
-                <div className="section2">
-                    <div>
-                        <em>Pets have a way of finding the people who need them, and filling an emptiness we didn’t ever know we had.</em>
-                        <p>–Thom Jones</p>
-                    </div>
-                </div>
+
+                <Grid className="section2">
+                    <Row>
+                        <Col xs={18} md={12}>
+                            <em>Pets have a way of finding the people who need them, and filling an emptiness we didn’t ever know we had.</em>
+                            <p>–Thom Jones</p>
+                        </Col>
+                    </Row>
+                </Grid>
+
                 <div className="section3">
                     <Grid>
                         <Row className="show-grid">
