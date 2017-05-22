@@ -2,12 +2,18 @@ import {combineReducers} from 'redux';
 import * as ActionTypes from './actions';
 
 
-function api (state = {}, action){
+function pets (state = {}, action){
     switch (action.type) {
-        case ActionTypes.RECEIVE_API:
+        case ActionTypes.RECEIVE_PETS:
             return Object.assign({}, state, action.payload);
 
-        case ActionTypes.REQUEST_API:
+        case ActionTypes.REQUEST_PETS:
+            return Object.assign({}, state, action.payload);
+
+        case ActionTypes.GETPETBYID:
+            return Object.assign({}, state, action.payload);
+
+        case ActionTypes.RECEIVEPETBYID:
             return Object.assign({}, state, action.payload);
 
         default:
@@ -17,7 +23,7 @@ function api (state = {}, action){
     }
 
 const rootReducer = combineReducers({
-    api
+    pets
 });
 
 export default rootReducer;

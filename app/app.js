@@ -5,9 +5,9 @@ import App from "./components/app";
 import Footer from  "./components/Footer";
 import Header from  "./components/Header";
 import Content from  "./components/Content";
-import LoginModal from "./components/loginModal";
-import Dogs from "./components/Dogs";
+import DogsDetails from "./components/DogsDetails";
 import DogsList from "./components/DogsList";
+import LoginModal from "./components/loginModal";
 import "./style.scss";
 import { Provider } from 'react-redux';
 import configureStore from './redux/store';
@@ -20,7 +20,7 @@ render(
             <Route component={App}>
                 <Route path="/" components={{Header: Header, content: Content, Footer: Footer}} />
                 <Route path="/pets" components={{Header: Header, content: DogsList}} />
-                <Route path="/pets/:id" components={{Header: Header, content: Dogs}} />
+                <Route path="/pets/:id" components={{Header: Header, content: DogsDetails}} />
                 <Route path="/login" components={{Header: Header, content: LoginModal}}/>
             </Route>
         </Router>

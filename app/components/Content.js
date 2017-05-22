@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import { fetchApi }  from '../redux/actions';
+import { fetchPets }  from '../redux/actions';
 
 import { Grid, Row, Col } from 'react-bootstrap';
 
 class Content extends Component{
     constructor(props){
         super(props);
-        props.requestApi();
+        props.requestPets();
     }
 
     render() {
@@ -135,14 +136,14 @@ class Content extends Component{
 
 const mapStateToProps = (state) => {
     return {
-        api: Object.assign({}, state.api)
+        pets: Object.assign({}, state.pets)
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        requestApi: () => {
-            dispatch(fetchApi());
+        requestPets: () => {
+            dispatch(fetchPets());
         }
     };
 };
