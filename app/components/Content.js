@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { PropTypes } from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
-import { fetchPets }  from '../redux/actions';
+import React, { Component } from "react";
+import { PropTypes } from "react";
+import { Link } from "react-router";
+import { connect } from "react-redux";
+import { fetchPets }  from "../redux/actions";
 
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col } from "react-bootstrap";
 
 class Content extends Component{
     constructor(props){

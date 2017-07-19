@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import { Button, Thumbnail, Row, Grid, Col } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Button, Thumbnail, Row, Grid, Col } from "react-bootstrap";
 
 export default class Dogs extends Component{
 
     constructor(props){
         super(props);
-        console.log(props);
     }
     render() {
         return (
@@ -20,4 +19,4 @@ export default class Dogs extends Component{
             </div>
         );
     }
-};
+}

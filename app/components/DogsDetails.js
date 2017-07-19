@@ -1,7 +1,7 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { getPetbyId } from '../redux/actions'
-import { Image, Button, Row, Grid, Col } from 'react-bootstrap';
+import React from "react";
+import { connect } from "react-redux";
+import { getPetbyId } from "../redux/actions";
+import { Image, Button, Row, Grid, Col } from "react-bootstrap";
 
 class DogsDetails extends React.Component {
     constructor(props) {
@@ -51,7 +51,7 @@ class DogsDetails extends React.Component {
 
                     <Row>
                         <Col md={6} mdOffset={4}>
-                            <Button bsSize="large">I'm Interested!</Button>
+                            <Button bsSize="large" href={this.props.isAuthenticated ? "#interested": "#login"}>I'm Interested!</Button>
                         </Col>
                     </Row>
                 </Grid>
@@ -62,7 +62,8 @@ class DogsDetails extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        pets: state.pets
+        pets: state.pets,
+        isAuthenticated: state.login.isAuthenticated
     };
 };
 
@@ -71,8 +72,8 @@ const mapDispatchToProps = (dispatch) => {
         getPetbyId: petId => {
             dispatch(getPetbyId(petId));
         }
-    }
-}
+    };
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(DogsDetails);
